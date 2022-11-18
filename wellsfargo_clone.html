@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    margin-left: 0;
+    padding: 0;
+    font-family: Wells Fargo Sans Regular,Arial,Helvetica,"sans-serif";
+    max-width: 1700px;
+ }
+ header{
+    width: 100%;
+    background-color: rgb(226, 42, 42);
+    border-bottom: 5px solid rgb(255, 208, 0);
+    padding: 20px 60px;
+    color: white;
+    display: inline-flex;
+ }
+ .right{
+    margin-left: 50%;
+    font-size: 15px;
+ }
+ header > div > a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+ }
+ .head_sign{
+    margin: 0 0 0 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    font-size: 17px;
+ }
+ .nav_bar{
+    width: 96%;
+    background-color: rgb(243, 241, 241);
+    padding: 10px 60px 10px 30px;
+    color: white;
+    display: inline-flex;
+    font-size: 17px;
+    margin-left: 2%;
+ }
+ .nav_bar > a{
+    text-decoration: none;
+    color: black;
+    margin: 10px 30px 0 0;
+ }
+ .selected{
+    width: 100%;
+    background-color: #ffff;
+    padding: 10px 60px;
+    display: inline-flex;
+    font-size: 17px;
+ }
+ .selected > a{
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+    font-size: 17px;
+ }
+ form{
+    background-image: url(https://www17.wellsfargomedia.com/assets/images/contextual/responsive/hpprimary/wfi_ph_b_mv_0723_3954_b_1700x700.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 700px;
+    width: 100%;
+    background-position: 50%;
+    font-size: 17px;
+ }
+ .g_morn{
+    border: 1px transparent black;
+    border-radius: 5%;
+    box-shadow: 1px 1px 10px 1px black;
+    position: absolute;
+    z-index: auto;
+    width: 328px;
+    height: 400px;
+    margin: 48px 0 0 48px;
+    display: block;
+    padding: 5px 15px;
+    font-size: 17px;
+ }
+ .g_morn > p{
+    color: rgb(179, 178, 178);
+ }
+ .g_morn > a{
+    text-decoration: none;
+    color: black;
+ }
+ .g_morn > .username, .password{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+ }
+ .g_morn > input[type=checkbox]{
+    height: 30px;
+    width: 30px;
+ }
+ .g_morn > input[value=username], input[value=password] {
+    color: rgb(179, 178, 178);
+    font-size: 17px;
+ }
+ .g_morn > button{
+    background-color: rgb(226, 42, 42);
+    color: #ffff;
+    padding: 10px 50px;
+    border-radius: 50px;
+    height: 40px;
+    margin: 10px 20px;
+    font-size: 17px;
+ }
+ .opt{
+    box-sizing: border-box;
+    background-color: rgb(250, 248, 248);
+    width: 109%;
+    text-decoration: none;
+    margin-left: -15px;
+    border-radius: 15px;
+    padding: 5px;
+    height: 97px;
+ }
+ .opt > a{
+    color: black;
+    display: block;
+    margin: 5px;
+    padding-left: 5px;
+    text-decoration: none;
+ }
+ .front{
+    position: absolute;
+    z-index: auto;
+    margin: 120px 0 0 500px;
+    display: block;
+    font-size: 17px;
+ }
+ .front > h1{
+    font-size: 50px;
+ }
+ .front > p{
+    font-size: 30px;
+ }
+ .front > button, .s_box > button, .t_box > button{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px 70px;
+    font-size: 17px;
+ }
+ .first_box{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    margin: 20px auto;
+    justify-content: center;
+ }
+ .f_box{
+    border: 2px solid rgb(250, 248, 248);
+    border-radius: 25px;
+    width: 20%;
+    padding: 15px;
+    margin: auto;
+    height: auto;
+    font-size: 17px;
+    background-color: rgb(230, 228, 228);
+    justify-content: center;
+ }
+ .f_box > img{
+    padding: 10px 40% 0 40%;
+ }
+ .f_box > h3, .s_box > h3{
+    padding: 5px 20px;
+    font-size: 0 30px;
+ }
+ .f_box > p, .s_box > p{
+    padding: 0 20px;
+    font-size: 20px;
+ }
+ .f_box > a, .s_box > a{
+    padding: 0 20px;
+    font-size: 20px;
+    align-self: flex-end;
+ }
+ .earn{
+    background-image: url(https://www17.wellsfargomedia.com/assets/images/contextual/responsive/lpromo/autograph_hplp_1600x700.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 700px;
+    width: 100%;   
+    display: block;
+    background-position: 50%;
+    font-size: 17px;
+ }
+ .earn_cash{
+    width: 400px;
+    padding: 80px 0 0 200px;
+ }
+ .earn_cash > h3{
+    font-size: 40px;
+ }
+ .earn_cash > p{
+    font-size: 20px;
+ }
+ .earn_cash > button{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px 70px;
+    font-size: 17px;
+ }
+ .yellow_bar{
+    background-color: rgb(253, 216, 2);
+    width: 10%;
+    height: 5px;
+    margin: 5% 50%;
+    border-radius: 50px;
+ }
+ h1, h2{
+    text-align: center;
+    margin-bottom: 20px;
+ }
+ .second_box{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    margin: 40px auto;
+    justify-content: center;
+ }
+ .s_box{
+    border: 2px solid rgb(250, 248, 248);
+    border-radius: 25px;
+    width: 30%;
+    padding: 15px;
+    margin: auto;
+    height: auto;
+    font-size: 17px;
+    background-color: rgb(230, 228, 228);
+    justify-content: center;
+ }
+ .s_box > img{
+    border-radius: 10px;
+    width: 106%;
+    margin: -3% 0 0 -3%;
+ }
+ .palm{
+    margin-top: 20px;
+    background-image: linear-gradient(rgb(98, 6, 151), rgb(193, 30, 207));
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;
+ }
+ .palm_img{
+    width: 30%;
+    padding: 5% 100px 5% 100px;
+ }
+ .palm_text{
+    width: 50%;
+    padding: 5% 5% 5% 0;
+ }
+ .palm_text > h3{
+    font-size: 40px;
+ }
+ .palm_text > h4{
+    font-size: 30px;
+ }
+ .palm_text > p{
+    font-size: 20px;
+    margin-top: 50px;
+ }
+ .palm_text > h5{
+    margin-left: 250px;
+    font-size: 20px;
+ }
+ .palm_text > button{
+    width: 40%;
+    border-radius: 50px;
+    font-size: 17px;
+ }
+ .third_box{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    margin: 40px auto;
+    justify-content: center;
+ }
+ .t_box{
+    border: 2px solid rgb(250, 248, 248);
+    border-radius: 25px;
+    width: 40%;
+    padding: 15px;
+    margin: auto;
+    height: auto;
+    font-size: 17px;
+    background-color: rgb(230, 228, 228);
+    justify-content: center;
+ }
+ .t_box > img{
+    border-radius: 10px;
+    width: 104%;
+    margin: -2% 0 0 -2.1%;
+ }
+ h3{
+    font-size: 30px;
+    padding-left: 70px;
+ }
+ .help > a{
+    text-decoration: none;
+    padding-left: 60px;
+    margin: 0 50px 40px 0;
+    font-size: 17px;
+    color: black;
+ }
+ footer{
+    background-color: rgb(226, 221, 221);
+    font-size: 17px;
+    padding: 40px 60px 20px 60px;
+ }
+ .foot_link > a{
+    text-decoration: none;
+    color: black;
+    padding: 0 20px;
+    border-right: 1px solid black;
+ }
+ .foot_link > a:last-child{
+    border-right: none;
+ }
+ .investment{
+    border: 2px solid black;
+ }
+ .investment > strong{
+    margin: 20px 0 0 10px;
+ }
+ .investment > strong > ul{
+    margin-left: 30px;
+ }
+ body{
+    max-width: 1700px;
+    margin: 0 auto;
+ }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>WellsFargo Homepage</title>
+</head>
+<header>
+    <div class="logo">
+        <img src="https://www17.wellsfargomedia.com/assets/images/rwd/wf_logo_220x23.png" alt="Wells Fargo Home Page">
+    </div>
+    <div class="right">
+        <a href="#">ATMs/Locations</a> 
+        <a href="#">Help</a> 
+        <a href="#">About Us</a> 
+        <a href="#">Espanyol</a> 
+        <i class="material-icons">search</i>
+        <button class="head_sign">Sign On</button>
+    </div>
+</header>
+<body>
+    <div class="nav_bar">
+        <a href="#">Personal</a> 
+        <a href="#">Investing & Wealth Management</a> 
+        <a href="#">Small Business</a> 
+        <a href="#">Commercial Banking</a> 
+        <a href="#">Corporate & Investment Banking</a> 
+    </div>
+    <div class="selected">
+        <a href="#">Checking</a> 
+        <a href="#">Savings & CDs</a> 
+        <a href="#">Credit Cards</a> 
+        <a href="#">Home Loans</a> 
+        <a href="#">Personal Loans</a> 
+        <a href="#">Auto Loans</a> 
+        <a href="#">Premier</a> 
+        <a href="#">Education & Tools</a> 
+    </div>
+    <form>
+        <div class="g_morn">
+            <h3>Good morning</h3>
+            <p>Sign on to manage your accounts.</p>
+            <input type="text" class="username" value="username">
+            <br>
+            <input type="text" class="password" value="password">
+            <br>
+            <input type="checkbox" class="checkbox">
+            <label for="checkbox">Save username</label><br>
+            <button class"sign_front">Sign On</button><a href="#">Enroll</a>
+            <div class="opt">
+                <a href="#">Forgot username or password?</a>
+                <a href="#">Security Center</a>
+                <a href="#">Privacy, Cookies, and Legal</a>
+            </div>
+        </div>
+        <div class="front">
+            <h1>Simplify your life</h1>
+            <p>Your money's at hand with Everyday Checking</p>
+            <button class="start">Start now</button>
+        </div>
+    </form>
+    <div class="first_box">
+        <div class="f_box">
+            <img src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/mastercard-credit-card.png"/>
+            <h3>Pay with pride</h3>
+            <p>Customize your Wells Fargo Debit Card. Choose from over 30 collegiate designs.</p>
+            <a href="#">Get started<img src="https://img.icons8.com/metro/26/000000/chevron-right.png"/></a>
+        </div>
+        <div class="f_box">
+            <img src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/mastercard-credit-card.png"/>
+            <h3>Earn Points on Rent</h3>
+            <p>Redeem for travel, rent credit and more</p><br>
+            <a href="#">Learn more<img src="https://img.icons8.com/metro/26/000000/chevron-right.png"/></a>
+        </div>
+        <div class="f_box">
+            <img src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/home-page.png"/>
+            <h3>Buying a house? We can help.</h3><br><br><br><br>
+            <a href="#">Learn more<img src="https://img.icons8.com/metro/26/000000/chevron-right.png"/></a>
+        </div>
+        <div class="f_box">
+            <h3>Interest rates today</h3>
+            <img src="https://img.icons8.com/external-flat-wichaiwi/64/000000/external-financial-economic-crisis-flat-wichaiwi.png"/><br><br><br><br><br>
+            <a href="#">Check rates<img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-down.png"/></a>
+        </div>
+    </div>
+    <div class="earn">
+        <div class="earn_cash">
+            <h3>Earn a $200 cash rewards bonus</h3>
+            <p>Earn 3X points on dining, travel, popular streaming services & more. Terms apply.</p>
+            <button class="Learn">Learn more</button>
+        </div>
+    </div>
+    <div class="yellow_bar"> </div>
+    <h1>Guidance to reach your financial goals</h1>
+    <div class="second_box">
+        <div class="s_box">
+            <img src="https://www17.wellsfargomedia.com/assets/images/rwd/man_on_phone_working_616x353.jpg">
+            <h3>Bank where life takes you</h3>
+            <p>Accounts and services that help make it easier to manage your money</p>
+            <button class="guide">Go to Banking Made Easy</button>
+        </div>
+        <div class="s_box">
+            <img src="https://www17.wellsfargomedia.com/assets/images/rwd/couple_consulting_616x353.jpg">
+            <h3>Explore your credit and borrowing options</h3>
+            <p>Tips to help build your credit and manage your debt</p>
+            <button class="guide">Get borrowing and credit resources</button>
+        </div>
+        <div class="s_box">
+            <img src="https://www17.wellsfargomedia.com/assets/images/rwd/woman_phone_street_616x353.jpg">
+            <h3>your money and information safe</h3>
+            <p>See how we help protect you. Get fraud prevention tips.</p>
+            <button class="guide">Visit the Security Center</button>
+        </div>
+    </div>
+    <div class="palm">
+        <div class="palm_img">
+            <img src="https://www17.wellsfargomedia.com/assets/images/rwd/Native_App_Phone_Personal_v8.png">
+        </div>
+        <div class="palm_text">
+            <h3>Banking in the palm of your hand</h3>
+            <h4>Our Wells Fargo Mobile® app gives you fast and secure access to your finances</h4>
+            <h4>Check your account balance</h4>
+            <h4>View your latest FICO® score</h4>
+            <h4>Send and receive money with Zelle®</h4>
+            <h5>Download our app</h5>
+            <button class="store"><img src="https://img.icons8.com/ios-filled/50/000000/mac-os.png"/>App Store</button>
+            <button class="store"><img src="https://img.icons8.com/fluency/48/000000/google-play.png"/>Google Play</button>
+            <p>*Screen image is simulated</p>
+            <p>The Zelle® related marks are used under license from Early Warning Services, LLC.</p>
+        </div>
+    </div>
+    <div class="yellow_bar"> </div>
+    <h1>Serving our customers and communities</h1>
+    <h2>It doesn't happen with one transaction, in one day on the job, or in one quarter. It's earned relationship by relationship.</h2>
+    <div class="third_box">
+        <div class="t_box">
+            <img src="https://www17.wellsfargomedia.com/assets/images/rwd/volunteers_cars_616x353.jpg">
+            <h3>Who we are</h3>
+            <p>Wells Fargo helps strengthen communities through diversity, equity, and inclusion, economic empowerment, and sustainability.</p>
+            <button class="guide">About Wells Fargo</button>
+        </div>
+        <div class="t_box">
+            <img src="https://www17.wellsfargomedia.com/assets/images/rwd/woman_in_office_616x353.jpg">
+            <h3>Living our commitment</h3>
+            <p>Explore stories about how we're helping customers succeed and communities thrive.</p>
+            <button class="guide">Wells Fargo Stories</button>
+        </div>
+    </div>
+    <h3>How can we help?</h3>
+        <div class="help">
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/marker--v1.png"/>Find a location<img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-down.png"/></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/saturday.png"/>Make an appointment<img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-down.png"/></a>
+            <a href="#"><img src="https://img.icons8.com/color/48/000000/help--v1.png"/>Quick help<img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-down.png"/></a>
+        </div><br>
+    <footer>
+        <div class="foot_link">
+            <a href="#">Privacy, Cookies, Security & Legal</a> 
+            <a href="#">Notice of Data Collection</a> 
+            <a href="#">General Terms of Use</a> 
+            <a href="#">Online Access Agreement</a> 
+            <a href="#">Ad Choices</a> 
+            <a href="#">Report Fraud</a> 
+            <a href="#">About Wells Fargo</a> 
+            <a href="#">Careers</a> 
+            <a href="#">Diversity and Accessibility</a> 
+            <a href="#">Sitemap</a> 
+        </div>
+        <div class="Social _Media_links">
+            <img src="https://img.icons8.com/ios-filled/50/000000/facebook--v2.png"/>
+            <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"/>
+            <img src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"/>
+            <img src="https://img.icons8.com/ios-filled/50/000000/pinterest--v1.png"/>
+            <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/>
+            <img src="https://img.icons8.com/ios-filled/50/000000/twitter-squared.png"/>
+        <div class="investment">
+            <strong>Investment and Insurance Products are:
+                <ul>
+                    <li>Not Insured by the FDIC or Any Federal Government Agency</li>
+                    <li>Not a Deposit or Other Obligation of, or Guaranteed by, the Bank or Any Bank Affiliate</li>
+                    <li>Subject to Investment Risks, Including Possible Loss of the Principal Amount Invested</li> 
+                </ul>
+            </strong>
+        </div>
+        <p>Investment products and services are offered through Wells Fargo Advisors. Wells Fargo Advisors is a trade name used by Wells Fargo Clearing Services, LLC (WFCS) and Wells Fargo Advisors Financial Network, LLC, Members SIPC, separate registered broker-dealers and non-bank affiliates of Wells Fargo & Company.</p>
+        <br>
+        <p>Android, Chrome, Google Pay, Google Pixel, Google Play, Wear OS by Google, and the Google Logo are trademarks of Google LLC.</p>
+        <br>
+        <p>Apple, the Apple logo, Apple Pay, Apple Watch, Face ID, iPad, iPad Pro, iPhone, iTunes, Mac, Safari, and Touch ID are trademarks of Apple Inc., registered in the U.S. and other countries. Apple Wallet is a trademark of Apple Inc. App Store is a service mark of Apple Inc.</p>
+        <br>
+        <p>Deposit products offered by Wells Fargo Bank, N.A. Member FDIC.</p>
+        <br>
+        <p><img src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/000000/external-House-places-those-icons-lineal-those-icons-2.png"/><strong>Equal Housing Lender</strong></p>
+        <br>
+        <p>CAR-0722-01885</p>
+        <br>
+        <p>LRC-0122</p>
+        <br>
+        <p>© 1999 - 2022 Wells Fargo. NMLSR ID 399801</p>
+       </footer>
+   </body>
+</html>    
